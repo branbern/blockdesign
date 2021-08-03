@@ -1,0 +1,36 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-blockdesign-dev-110526-authRole",
+      "UnauthRoleArn": "arn:aws:iam::087246383500:role/amplify-blockdesign-dev-110526-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::087246383500:role/amplify-blockdesign-dev-110526-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-blockdesign-dev-110526-deployment",
+      "UnauthRoleName": "amplify-blockdesign-dev-110526-unauthRole",
+      "StackName": "amplify-blockdesign-dev-110526",
+      "StackId": "arn:aws:cloudformation:us-east-1:087246383500:stack/amplify-blockdesign-dev-110526/3d9d33d0-f46c-11eb-838d-12717722e021",
+      "AmplifyAppId": "d1dgu2wd92reqp"
+    },
+    "categories": {
+      "function": {
+        "blockdesigna4a7e561CustomMessage": {
+          "REDIRECTURL": "http://google.com",
+          "EMAILSUBJECT": "Comfirmation",
+          "EMAILMESSAGE": "COnfirm",
+          "deploymentBucketName": "amplify-blockdesign-dev-110526-deployment",
+          "s3Key": "amplify-builds/blockdesigna4a7e561CustomMessage-364568636f39517a6743-build.zip"
+        },
+        "blockdesign375b8667CustomMessage": {
+          "REDIRECTURL": "http://google.com",
+          "EMAILSUBJECT": "",
+          "EMAILMESSAGE": "",
+          "deploymentBucketName": "amplify-blockdesign-dev-110526-deployment",
+          "s3Key": "amplify-builds/blockdesign375b8667CustomMessage-7a564731614165772b2b-build.zip"
+        }
+      },
+      "auth": {
+        "blockdesign375b8667": {}
+      }
+    }
+  }
+}

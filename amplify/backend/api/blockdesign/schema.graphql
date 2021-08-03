@@ -1,0 +1,12 @@
+type Map @model {
+  id: ID!
+  name: String!
+  createdBy: String!
+  seed: [Seed]
+}
+
+type Seed {
+  color: String!
+  x: Int!
+  y: Int!
+}

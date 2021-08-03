@@ -1,0 +1,26 @@
+{
+  "trigger": true,
+  "modules": [
+    "verification-link"
+  ],
+  "parentResource": "blockdesigna4a7e561",
+  "functionName": "blockdesigna4a7e561CustomMessage",
+  "resourceName": "blockdesigna4a7e561CustomMessage",
+  "parentStack": "auth",
+  "triggerEnvs": [
+    {
+      "key": "RESOURCENAME",
+      "value": "resourceName"
+    }
+  ],
+  "triggerDir": "C:\\Users\\berni\\AppData\\Roaming\\npm\\node_modules\\@aws-amplify\\cli\\node_modules\\amplify-category-auth\\provider-utils\\awscloudformation\\triggers\\CustomMessage",
+  "triggerTemplate": "CustomMessage.json.ejs",
+  "triggerEventPath": "CustomMessage.event.json",
+  "roleName": "blockdesigna4a7e561CustomMessage",
+  "skipEdit": true,
+  "REDIRECTURL": "http://google.com",
+  "EMAILSUBJECT": "Comfirmation",
+  "EMAILMESSAGE": "COnfirm",
+  "RESOURCENAME": "resourceName",
+  "enableCors": false
+}

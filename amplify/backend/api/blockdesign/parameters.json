@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "blockdesign",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authblockdesign375b8667",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
