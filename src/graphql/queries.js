@@ -9,8 +9,7 @@ export const getMap = /* GraphQL */ `
       createdBy
       seed {
         color
-        x
-        y
+        id
       }
       createdAt
       updatedAt
@@ -30,8 +29,7 @@ export const listMaps = /* GraphQL */ `
         createdBy
         seed {
           color
-          x
-          y
+          id
         }
         createdAt
         updatedAt

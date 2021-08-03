@@ -9,8 +9,7 @@ export const onCreateMap = /* GraphQL */ `
       createdBy
       seed {
         color
-        x
-        y
+        id
       }
       createdAt
       updatedAt
@@ -25,8 +24,7 @@ export const onUpdateMap = /* GraphQL */ `
       createdBy
       seed {
         color
-        x
-        y
+        id
       }
       createdAt
       updatedAt
@@ -41,8 +39,7 @@ export const onDeleteMap = /* GraphQL */ `
       createdBy
       seed {
         color
-        x
-        y
+        id
       }
       createdAt
       updatedAt

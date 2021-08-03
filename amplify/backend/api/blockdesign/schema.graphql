@@ -7,6 +7,5 @@ type Map @model {
 
 type Seed {
   color: String!
-  x: Int!
-  y: Int!
+  id: ID!
 }
