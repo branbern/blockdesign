@@ -16,6 +16,18 @@
     width: 25px;
     flex: 1 1 1
 }
+.small-cells-wrapper {
+    display: flex;
+    width: 440px;
+    height: 100%;
+    flex-wrap: wrap;
+}
+.small-cell {
+    border: 1px solid black;
+    height: 16px;
+    width: 13px;
+    flex: 1 1 1
+}
 
 .controls {
     margin-top: 20px;
@@ -70,21 +82,22 @@
     display: none !important;
 }
 
-.saves {
+.Saves {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-content: stretch;
-    height: 150px;
     padding: 100px 20px;
+    flex-wrap: wrap;
 }
 
 .map-save {
-    border: 1px solid black;
-    width: 20%; 
-    height:100%;
+    width: 42%;
+    height: 300px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 80px;
 }

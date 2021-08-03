@@ -1,6 +1,5 @@
 import React from 'react';
 import './Game.css';
-import Cell from './Cell'
 import {getAllMaps, saveMap} from '../API/interface'
 import ColorSketch from './ColorSketch'
 
@@ -84,31 +83,38 @@ class Game extends React.Component {
                             <div className="Cell" key={i} onClick={() => this.updateCell(cell.id)} style={{background: cell.color}}/>
                         ))}
                     </div>
-                    <div className='Saves'>
-                        {this.state.saves.map((save, i) => (
-                            <div className="map-save" key={i} onClick={() => this.loadSavedMap(save.seed)}>
-                                <p>{save.name}</p>
+                    
+                    <div className="controls">
+                        <ColorSketch setColor={this.handleSetColor} color={this.state.color}/>
+                        <button className="button" onClick={this.handleRandom}>Random</button>
+                        <button className="button" onClick={this.handleClear}>Clear</button>
+                        <button className="button" onClick={this.showModal}>Save</button>
+
+                        <div id="myModal" className={this.state.showModal ? 'modal': 'hide modal'}>
+                            <div className="modal-content">
+                                <span className="close" onClick={() => this.setState({showModal: false})}>&times;</span>
+                                <p>Looks great! Now choose a name to call this beautiful piece of art...</p>
+                                <input type="text" id="input" name="map name" onChange={(e) => this.setState({mapName: e.target.value})}/>
+
+                                <button onClick={this.submitModal}>finished!</button>
                             </div>
-                        ))}
-                    </div>
-                </div>
-               
-                <div className="controls">
-                    <ColorSketch setColor={this.handleSetColor} color={this.state.color}/>
-                    <button className="button" onClick={this.handleRandom}>Random</button>
-                    <button className="button" onClick={this.handleClear}>Clear</button>
-                    <button className="button" onClick={this.showModal}>Save</button>
-
-                    <div id="myModal" className={this.state.showModal ? 'modal': 'hide modal'}>
-                        <div className="modal-content">
-                            <span className="close" onClick={() => this.setState({showModal: false})}>&times;</span>
-                            <p>Looks great! Now choose a name to call this beautiful piece of art...</p>
-                            <input type="text" id="input" name="map name" onChange={(e) => this.setState({mapName: e.target.value})}/>
-
-                            <button onClick={this.submitModal}>finished!</button>
                         </div>
                     </div>
                 </div>
+                <div className='Saves'>
+                        {this.state.saves.map((save, i) => {
+                            console.log(save)
+                            return (<div className="map-save" key={i} onClick={() => this.loadSavedMap(save.seed)}>
+                                        <p style={{width: 400, margin: 'auto', padding: 20}}><span>Creator: {save.createdBy}</span> <span style={{float: 'right'}}>Design Name: {save.name}</span></p>
+                                        <div className='small-cells-wrapper'>
+                                            {save.seed.map((cell, i) => (
+                                                <div className="small-cell" key={i} onClick={() => this.updateCell(cell.id)} style={{background: cell.color}}/>
+                                            ))}
+                                        </div>
+                                    </div>)
+                        })}
+                    </div>
+               
             </div>
         );
     }
