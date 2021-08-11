@@ -102,18 +102,18 @@ class Game extends React.Component {
                     </div>
                 </div>
                 <div className='Saves'>
-                        {this.state.saves.map((save, i) => {
-                            console.log(save)
-                            return (<div className="map-save" key={i} onClick={() => this.loadSavedMap(save.seed)}>
-                                        <p style={{width: 400, margin: 'auto', padding: 20}}><span>Creator: {save.createdBy}</span> <span style={{float: 'right'}}>Design Name: {save.name}</span></p>
-                                        <div className='small-cells-wrapper'>
-                                            {save.seed.map((cell, i) => (
-                                                <div className="small-cell" key={i} onClick={() => this.updateCell(cell.id)} style={{background: cell.color}}/>
-                                            ))}
-                                        </div>
-                                    </div>)
-                        })}
-                    </div>
+                    {this.state.saves.map((save, i) => {
+                        console.log(save)
+                        return (<div className="map-save" key={i} onClick={() => this.loadSavedMap(save.seed)}>
+                                    <p style={{width: 400, margin: 'auto', padding: 20}}><span>Creator: {save.createdBy}</span> <span style={{float: 'right'}}>Design Name: {save.name}</span></p>
+                                    <div className='small-cells-wrapper'>
+                                        {save.seed.map((cell, i) => (
+                                            <div className="small-cell" key={i} onClick={() => this.updateCell(cell.id)} style={{background: cell.color}}/>
+                                        ))}
+                                    </div>
+                                </div>)
+                    })}
+                </div>
                
             </div>
         );
